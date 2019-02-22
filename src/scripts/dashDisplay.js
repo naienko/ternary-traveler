@@ -8,7 +8,7 @@ import printToDom from "./printToDom";
 import htmlFactory from "./htmlfactory";
 
 const dashDisplay = () => {
-    apiManager.get("places","")
+    apiManager.get("interests","?_expand=place&_sort=placeId")
         .then(
             placesArray => {
                 let htmlString = "";

@@ -52,7 +52,7 @@ As a user, I should be able to enter in an point of interest, and associate it w
 \
 **When** the user opens the application
 \
-**Then** all points of interests should be displayed with their name, description, cost, review if it's not blank and the place it is located
+**Then** all points of interests should be displayed with their name, description and the place it is located
 
 **Given** a user wants to keep track of a new point of interest
 \
