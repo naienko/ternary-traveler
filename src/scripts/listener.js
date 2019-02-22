@@ -21,8 +21,12 @@ const clickBubbler = () => {
                     .then(dashDisplay);
                 break;
             case "delete":
-                apiManager.delete("interests", buttonBits[1])
-                    .then(dashDisplay);
+                if (window.confirm("Do you really want to delete this point of interest?")) {
+                    apiManager.delete("interests", buttonBits[1])
+                        .then(dashDisplay);
+                } else {
+                    dashDisplay();
+                }
                 break;
             default:
                 break;
