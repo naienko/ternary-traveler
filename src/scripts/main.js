@@ -1,17 +1,5 @@
-import apiManager from "./apiManager";
-import printToDom from "./printToDom";
-import htmlFactory from "./htmlfactory";
 import clickBubbler from "./listener";
+import dashDisplay from "./dashDisplay";
 
-apiManager.get("places","")
-    .then(
-        placesArray => {
-            let htmlString = "";
-            placesArray.forEach(element => {
-                htmlString += htmlFactory.placeFactory(element);
-            });
-            printToDom.replace(".output", htmlString);
-        }
-    )
-
+dashDisplay();
 clickBubbler();
