@@ -18,7 +18,11 @@ const clickBubbler = () => {
             case "create":
                 let newObject = objectFactory();
                 apiManager.create("interests", newObject)
-                    .then(dashDisplay)
+                    .then(dashDisplay);
+                break;
+            case "delete":
+                apiManager.delete("interests", buttonBits[1])
+                    .then(dashDisplay);
                 break;
             default:
                 break;

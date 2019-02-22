@@ -22,6 +22,12 @@
       "name": "Rome",
       "description": "has the Pope and the Coliseum",
       "id": 1
+    },
+    {
+      "placeId": "2",
+      "name": "Geneva",
+      "description": "a center of humanitarian rights",
+      "id": 2
     }
   ]
 }
