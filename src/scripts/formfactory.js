@@ -26,7 +26,7 @@ const formFactory = {
 <select name="pointPlace" id="pointPlace" required>
 `;
                     placeArray.forEach(element => {
-                        htmlString += `<option id="${element.id}">${element.name}</option>
+                        htmlString += `<option value="${element.id}">${element.name}</option>
                         `;
                     });
                     htmlString += `</select>                    
