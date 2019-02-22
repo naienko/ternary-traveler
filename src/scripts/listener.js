@@ -11,12 +11,17 @@ import dashDisplay from "./dashDisplay";
 const clickBubbler = () => {
     document.body.addEventListener("click", event => {
         let buttonBits = event.target.id.split("--");
-        if (buttonBits[0] === "add") {
-            formFactory.newEntry();
-        } else if (buttonBits[0] === "create") {
-            let newObject = objectFactory();
-            apiManager.create("interests", newObject)
-                .then(dashDisplay)
+        switch (buttonBits[0]) {
+            case "add":
+                formFactory.newEntry();
+                break;
+            case "create":
+                let newObject = objectFactory();
+                apiManager.create("interests", newObject)
+                    .then(dashDisplay)
+                break;
+            default:
+                break;
         }
     })
 };
