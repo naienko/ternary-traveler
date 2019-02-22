@@ -4,6 +4,7 @@ Task: create form html string
 */
 
 import apiManager from "./apiManager";
+import printToDom from "./printToDom";
 
 const formFactory = {
     newEntry: () => {
@@ -22,15 +23,18 @@ const formFactory = {
 </fieldset>
 <fieldset>
 <label for="pointPlace">Location</label>
-<select name="pointPlace" id="pointPlace" required>`;
+<select name="pointPlace" id="pointPlace" required>
+`;
                     placeArray.forEach(element => {
-                        htmlString += `<option id="${element.id}>${element.name}</option>`
+                        htmlString += `<option id="${element.id}>${element.name}</option>
+                        `;
                     });
                     htmlString += `</select>                    
 </fieldset>
 <button id="create--point">Add Point of Interest</button>
 </section>`;
-                    return htmlString;
+// can't seem to return a string out of this method; why?
+                    printToDom.replace(".output", htmlString);
                 }
             )
     }
